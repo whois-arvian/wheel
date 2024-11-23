@@ -34,7 +34,7 @@ def get_new_token():
 def send_put_request(new_token):
     # Payload untuk PUT request
     payload = {
-        "clicks": 10000
+        "clicks": 100000
     }
 
     # Headers untuk PUT request
@@ -51,10 +51,10 @@ def send_put_request(new_token):
         "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
 
         # Special HTTP/2 headers
-        ":authority": "clicker-api.crashgame247.io",
-        ":method": "PUT",
-        ":path": "/meta/clicks",
-        ":scheme": "https"
+        ":authority:": "clicker-api.crashgame247.io",
+        ":method:": "PUT",
+        ":path:": "/meta/clicks",
+        ":scheme:": "https"
     }
 
     # Mengirimkan PUT request ke API
@@ -79,8 +79,8 @@ def main():
         else:
             print("Gagal mendapatkan token baru.")
         
-        # Menunggu 2 detik sebelum mengulang lagi
-        time.sleep(2)
+        # Menunggu 1 detik sebelum mengulang lagi
+        time.sleep(1)
 
 # Menjalankan program
 if __name__ == "__main__":
