@@ -39,22 +39,23 @@ def send_put_request(new_token):
 
     # Headers untuk PUT request
     headers = {
-        "Authorization": f"Bearer {new_token}",
-        "Content-Type": "application/json",
+        "Authorization": f"Bearer {token}",
         "accept": "application/json, text/plain, */*",
-        "accept-encoding": "gzip, deflate, br",
+        "accept-encoding": "gzip, deflate, br, zstd",
         "accept-language": "en-GB,en;q=0.6",
         "cache-control": "no-cache",
-        "pragma": "no-cache",
+        "content-type": "application/json",
         "origin": "https://clicker.crashgame247.io",
+        "pragma": "no-cache",
         "referer": "https://clicker.crashgame247.io/",
-        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
-
-        # Special HTTP/2 headers
-        ":authority:": "clicker-api.crashgame247.io",
-        ":method:": "PUT",
-        ":path:": "/meta/clicks",
-        ":scheme:": "https"
+        "sec-ch-ua": '"Brave";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": '"Android"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        "sec-gpc": "1",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
     }
 
     # Mengirimkan PUT request ke API
