@@ -10,7 +10,7 @@ put_url = "https://clicker-api.crashgame247.io/meta/clicks"
 def get_new_token():
     # Payload yang berisi token lama yang sudah dienkripsi
     payload = {
-        "payload": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMjhjOGE4NDQ2NDNhOWQ2MTI3MmE2ZGFhODk4NDlhNmE3ZDk4OGE1OWUxZGYzY2NlZmJlNWNiZjgzMDliZWU5NiIsImlhdCI6MTczMjM4OTE2NiwiZXhwIjoxNzMyMzkwMDY2fQ.ob9Pjkiy95RbsKEBWQ0Gf80ry_dk4UdgIY5sm81nFZ4"
+        "payload": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTg2ZjIxLTJjY2UtNDYwZi1hYTljLTVlNDk1NDdlMWIzMSIsInVzZXJuYW1lIjoid2hvaXNhcnZpYW4iLCJmaXJzdE5hbWUiOiJXaG9pcyIsImxhc3ROYW1lIjoiQXJ2aWFuIiwiYXZhdGFyVXJsIjoiIiwidHJpYmVJZCI6bnVsbCwid2hpdGVsaXN0ZWQiOnRydWUsImpvaW5lZFdhaXRsaXN0Ijp0cnVlLCJuZnRDb3VudCI6MCwid2FsbGV0QWRkcmVzcyI6bnVsbCwibG9jYWxlIjoiZW4iLCJpc0Jhbm5lZCI6ZmFsc2UsIm5hbm9pZCI6IklPdGNXY1FlIiwiaXNPbmJvYXJkaW5nQ29tcGxldGVkIjp0cnVlLCJpc0FwcHJvdmVkU2NyZWVuQWNrbm93bGVkZ2VkIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI0LTA5LTE1VDEyOjU2OjQ0LjY1NloiLCJpYXQiOjE3MzIzOTA1NzMsImV4cCI6MTczMjk5NTM3M30.WkYwX06cZxG9ifqG2N8N4FosN7GVriuwQ_Qq2npnEy8"
     }
 
     # Mengirimkan permintaan POST untuk mendapatkan token baru
