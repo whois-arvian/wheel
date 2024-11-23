@@ -28,7 +28,7 @@ def get_new_token():
         return new_token
     else:
         print(f"Failed to get token. Status code: {response.status_code}")
-        return None
+        return payload.payload
 
 # Fungsi untuk mengirimkan PUT request menggunakan token baru
 def send_put_request(new_token):
