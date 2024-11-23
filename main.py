@@ -5,12 +5,13 @@ import time
 # URL untuk mendapatkan token dan untuk PUT request
 get_token_url = "https://clicker-api.crashgame247.io/user/wallet/proof"
 put_url = "https://clicker-api.crashgame247.io/meta/clicks"
+token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTg2ZjIxLTJjY2UtNDYwZi1hYTljLTVlNDk1NDdlMWIzMSIsInVzZXJuYW1lIjoid2hvaXNhcnZpYW4iLCJmaXJzdE5hbWUiOiJXaG9pcyIsImxhc3ROYW1lIjoiQXJ2aWFuIiwiYXZhdGFyVXJsIjoiIiwidHJpYmVJZCI6bnVsbCwid2hpdGVsaXN0ZWQiOnRydWUsImpvaW5lZFdhaXRsaXN0Ijp0cnVlLCJuZnRDb3VudCI6MCwid2FsbGV0QWRkcmVzcyI6bnVsbCwibG9jYWxlIjoiZW4iLCJpc0Jhbm5lZCI6ZmFsc2UsIm5hbm9pZCI6IklPdGNXY1FlIiwiaXNPbmJvYXJkaW5nQ29tcGxldGVkIjp0cnVlLCJpc0FwcHJvdmVkU2NyZWVuQWNrbm93bGVkZ2VkIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI0LTA5LTE1VDEyOjU2OjQ0LjY1NloiLCJpYXQiOjE3MzIzOTA4NzQsImV4cCI6MTczMjk5NTY3NH0.vHo6lBIMkJ3DTHDKAGl_eVdxzN2j3CAfV-u9CHnSFzo"
 
 # Fungsi untuk mendapatkan token baru dari API
 def get_new_token():
     # Payload yang berisi token lama yang sudah dienkripsi
     payload = {
-        "payload": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTg2ZjIxLTJjY2UtNDYwZi1hYTljLTVlNDk1NDdlMWIzMSIsInVzZXJuYW1lIjoid2hvaXNhcnZpYW4iLCJmaXJzdE5hbWUiOiJXaG9pcyIsImxhc3ROYW1lIjoiQXJ2aWFuIiwiYXZhdGFyVXJsIjoiIiwidHJpYmVJZCI6bnVsbCwid2hpdGVsaXN0ZWQiOnRydWUsImpvaW5lZFdhaXRsaXN0Ijp0cnVlLCJuZnRDb3VudCI6MCwid2FsbGV0QWRkcmVzcyI6bnVsbCwibG9jYWxlIjoiZW4iLCJpc0Jhbm5lZCI6ZmFsc2UsIm5hbm9pZCI6IklPdGNXY1FlIiwiaXNPbmJvYXJkaW5nQ29tcGxldGVkIjp0cnVlLCJpc0FwcHJvdmVkU2NyZWVuQWNrbm93bGVkZ2VkIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI0LTA5LTE1VDEyOjU2OjQ0LjY1NloiLCJpYXQiOjE3MzIzOTA4NzQsImV4cCI6MTczMjk5NTY3NH0.vHo6lBIMkJ3DTHDKAGl_eVdxzN2j3CAfV-u9CHnSFzo"
+        "payload": token
     }
 
     # Mengirimkan permintaan POST untuk mendapatkan token baru
@@ -28,7 +29,7 @@ def get_new_token():
         return new_token
     else:
         print(f"Failed to get token. Status code: {response.status_code}")
-        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTg2ZjIxLTJjY2UtNDYwZi1hYTljLTVlNDk1NDdlMWIzMSIsInVzZXJuYW1lIjoid2hvaXNhcnZpYW4iLCJmaXJzdE5hbWUiOiJXaG9pcyIsImxhc3ROYW1lIjoiQXJ2aWFuIiwiYXZhdGFyVXJsIjoiIiwidHJpYmVJZCI6bnVsbCwid2hpdGVsaXN0ZWQiOnRydWUsImpvaW5lZFdhaXRsaXN0Ijp0cnVlLCJuZnRDb3VudCI6MCwid2FsbGV0QWRkcmVzcyI6bnVsbCwibG9jYWxlIjoiZW4iLCJpc0Jhbm5lZCI6ZmFsc2UsIm5hbm9pZCI6IklPdGNXY1FlIiwiaXNPbmJvYXJkaW5nQ29tcGxldGVkIjp0cnVlLCJpc0FwcHJvdmVkU2NyZWVuQWNrbm93bGVkZ2VkIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI0LTA5LTE1VDEyOjU2OjQ0LjY1NloiLCJpYXQiOjE3MzIzOTA4NzQsImV4cCI6MTczMjk5NTY3NH0.vHo6lBIMkJ3DTHDKAGl_eVdxzN2j3CAfV-u9CHnSFzo"
+        return token
 
 # Fungsi untuk mengirimkan PUT request menggunakan token baru
 def send_put_request(new_token):
